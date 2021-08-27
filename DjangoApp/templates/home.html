@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<main role="main">
+  <div class="jumbotron">
+    <div class="col-md-12 mx-auto text-center text-black">
+      <img id="main-image" class="mb-5" src="{% static 'main/clayton_cook_head_shot.png' %}" alt="clayton_cook_head_shot" />
+      <h1 class="name-bold">Clayton S. Cook, P.E.</h1>
+      <h2>Civil Engineer - Aspiring Developer</h2>
+      <div class="divider-custom">
+        <div class="divider-custom-line">________________________</div>
+      </div>
+      <br>
+      <h4>
+        I'm a trained civil engineer that has grown to enjoy the amazingness that is coding. I started coding when I was
+        in graduate school. Ever since then I have continued to grow in my developer skills. I love the process of taking data,
+        organizing it and bringing it to life through web based solutions. My most recent project was organizing a website for 
+        a great online irish session, <a href='http://www.vgsdb.com' target="_blank">vgsdb.com</a>. Looking to grow my skills more in the area of 
+        database design, web developement, and programming.
+        <br>
+        <br>
+        Please look at my current portfolio and skills below.
+      </h4>
+      <hr>
+      <div class="row mx-auto" id="personal_links">
+        <div class="col-md-4">
+          <a href="{% static 'main/_2021-01-25_Clayton_S._Cook_Resume.pdf' %}" target="_blank" class="btn btn-primary btn-lg border-dark" id='resume'>Resume</a>
+        </div>
+        <div class='col-md-4'>
+          <a href='https://github.com/claytoncook12' target="_blank"><i class="fab fa-github fa-3x"></i></a>
+        </div>
+        <div class='col-md-4'>
+          <a href='https://www.linkedin.com/in/clayton-cook-a5580298/' target="_blank"><i class="fab fa-linkedin fa-3x" href='https://www.linkedin.com/in/clayton-cook-a5580298/'></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<section id='portfolio'>
+  <h2 id='section-header'>Portfolio</h2>
+  <hr>
+  <div id='projects-col' class="row mx-auto">
+    <!-- Card1 -->
+    <div class="card bg-light col-md-4">
+      <a href="http://www.vgsdb.com" target="_blank">
+        <img class="card-img-top" src="{% static 'main/projects/vgsdb_750x750.png' %}" alt="Card image cap">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title"><b>www.vgsdb.com</b></h5>
+        <h6><i>skills: django, database design, aws elasticbeanstalk</i></h6>
+        <p class="card-text">A website for organizing tunes played on a online irish session.
+          Used the Django web framework and AWS elasticbeanstalk.
+        </p>
+      </div>
+    </div>
+    <!-- Card2 -->
+    <div class="card bg-light col-md-4">
+      <a href="https://github.com/claytoncook12/DataQuest_DataEngineering_GuidedProjects/blob/main/Guided%20Project%20-%20Hacker%20News%20Pipeline.ipynb" target="_blank">
+        <img class="card-img-top" src="{% static 'main/projects/Guided_Project_-_Hacker_News_Pipeline.png' %}" alt="Card image cap">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title"><b>Data Pipeline Creation</b></h5>
+        <h6><i>skill: pipeline</i></h6>
+        <p class="card-text">This was a project completed in the DataQuest.io DataEngineering Carrer Path program.</p>
+      </div>
+    </div>
+    <!-- Card3 -->
+    <div class="card bg-light col-md-4">
+      <a href="https://github.com/claytoncook12/DataQuest_DataEngineering_GuidedProjects/blob/main/Guided%20Project%20-%20Implementing%20A%20Key-Value%20Database.ipynb" target="_blank">
+        <img class="card-img-top" src="{% static 'main/projects/Guided_Project_-_Implementing_A_Key-Val.png' %}" alt="Card image cap">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title"><b>Implementing A Key-Value Database</b></h5>
+        <h6><i>skill: database</i></h6>
+        <p class="card-text">This was a project completed in the DataQuest.io 
+          Data Engineering Career Path program</p>
+      </div>
+    </div>
+    <!-- Card4 -->
+    <div class="card bg-light col-md-4">
+      <a href="https://github.com/claytoncook12/DataQuest_DataEngineering_GuidedProjects/blob/main/Guided%20Project%20-%20Answering%20Business%20Questions%20using%20SQL.ipynb" target="_blank">
+        <img class="card-img-top" src="{% static 'main/projects/DataQuest_Answering_Business_Que.png' %}" alt="Card image cap">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title"><b>Answering Business Questions using SQL</b></h5>
+        <h6><i>skill: sql</i></h6>
+        <p class="card-text">This was a project completed in the DataQuest.io Data
+          Engineering Career Path program.</p>
+      </div>
+    </div>
+    <!-- Card5 -->
+    <div class="card bg-light col-md-4">
+      <a href="http://carcassonnelane.pythonanywhere.com/" target="_blank">
+        <img class="card-img-top" src="{% static 'main/projects/CarcassonneLaneWebsite_RAwY2ne.jpg' %}" alt="Card image cap">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title"><b>CarcassoneLane</b></h5>
+        <h6><i>skill: data application</i></h6>
+        <p class="card-text">Personal website to keep track of Carcassone
+          games that we play at the house.</p>
+      </div>
+    </div>
+  </div>
+
+  <section id='skills'>
+    <h2 id='section-header'>Skills</h2>
+    <hr>
+    <dl>
+      <dt>Programming Languages</dt>
+      <dd>- Python</dd>
+      <dd>- SQL</dd>
+      <dt>Data Analysis</dt>
+      <dd>- Pandas</dd>
+      <dt>Databases</dt>
+      <dd>- SQLite3</dd>
+      <dd>- PostgreSQL</dd>
+      <dd>- gINT</dd>
+      <dt>Web Frameworks</dt>
+      <dd>- Django</dd>
+      <dt>Code Editor</dt>
+      <dd>- Visual Studio Code</dd>
+      <dt>Version Control</dt>
+      <dd>- git</dd>
+    </dl>  
+  </section>
+<section>
+
+{% endblock %}

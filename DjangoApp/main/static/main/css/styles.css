@@ -1,0 +1,75 @@
+body{
+  padding-bottom: 0%;
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto';
+}
+
+.navbar{
+  background-color: #ffffff !important;
+  font-size: 25px;
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: #10941A;
+}
+
+.custom-toggler.navbar-toggler:hover {
+  border-color: #1ac729;
+}
+
+a#disabled {
+  color: #cfcfcf !important;
+}
+
+a:hover{
+	color:#1ac729 !important;
+}
+
+a {
+  color:  #10941A !important;
+}
+
+.color-me {
+  color: #10941A !important;
+}
+
+.navbar-toggler-icon{
+  color: #10941a !important;
+}
+
+.jumbotron{
+  background-color: #ffffff !important;
+  color: #10941A !important;
+  font-weight: bold;
+}
+
+#main-icon {
+  height: 75px;
+}
+
+#main-image {
+  
+}
+
+.name-bold {
+  font-weight: 1000;
+}
+
+#section-header {
+  font-weight: bold;
+  font-weight: 600;
+  color: #10941A !important;
+}
+
+#resume {
+  background-color: #ffffff;
+}
+
+.card.col-md-4 {
+  margin-top: 1%;
+}
+
+#personal_links > div {
+  margin-top: 3%;
+}
