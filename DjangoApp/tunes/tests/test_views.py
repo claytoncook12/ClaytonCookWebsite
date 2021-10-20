@@ -7,6 +7,7 @@ from django.urls import reverse
 
 from tunes.tests import factories
 
+
 @pytest.mark.django_db
 class TestTuneDetail:
     def test_reponse(self):
@@ -16,8 +17,9 @@ class TestTuneDetail:
         client = Client()
         response = client.get(obj.get_absolute_url())
 
-        assert response.status_code == 200, "tunes detail returns 200 status code"
-    
+        assert response.status_code == 200,\
+            "tunes detail returns 200 status code"
+
     def test_content(self):
 
         obj = factories.TuneFactory()
