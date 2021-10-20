@@ -54,11 +54,18 @@
         <div id="paper"></div>
         <div id="audio"></div>
         <div class="midi">MIDI</div>
+        <section class="output">
+            <nav>
+                <button onclick="window.print()"><i class="fa fa-print" aria-hidden="true"></i> Print</button>
+            </nav>
+        </section>
+    
         
         <!-- Load Script to Update 
              id="paper"
              id="audio"
              class="midi"
+             class="output"
         -->
         {% include "tunes/subtemplates/render_abc_audio_midi.html" with abc_text=abc.abc_full_default_bpm %} 
 
