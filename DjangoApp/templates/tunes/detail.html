@@ -49,7 +49,7 @@
 
 {% if abc_list %}
     {% for abc in abc_list %}
-        Key: {{ abc.key }}
+        Key: {{ abc.key|title }}
         <!-- divs for abc paper and audio -->
         <div id="paper"></div>
         <div id="audio"></div>
