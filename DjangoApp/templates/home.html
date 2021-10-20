@@ -7,13 +7,12 @@
 <main role="main">
   <div class="jumbotron">
     <div class="col-md-12 mx-auto text-center text-black">
-      <img id="main-image" class="mb-5" src="{% static 'main/clayton_cook_head_shot.png' %}" alt="clayton_cook_head_shot" />
       <h1 class="name-bold">Clayton S. Cook, P.E.</h1>
       <h2>Civil Engineer - Aspiring Developer</h2>
       <div class="divider-custom">
         <div class="divider-custom-line">________________________</div>
       </div>
-      <br>
+      <img id="main-image" class="mb-5" src="{% static 'main/clayton_cook_head_shot.png' %}" alt="clayton_cook_head_shot" />
       <h4>
         I'm a trained civil engineer that has grown to enjoy the amazingness that is coding. I started coding when I was
         in graduate school. Ever since then I have continued to grow in my developer skills. I love the process of taking data,
@@ -44,7 +43,7 @@
   <h2 id='section-header'>Portfolio</h2>
   <hr>
   <div id='projects-col' class="row mx-auto">
-    <!-- Card1 -->
+    <!-- Card -->
     <div class="card bg-light col-md-4">
       <a href="http://www.vgsdb.com" target="_blank">
         <img class="card-img-top" src="{% static 'main/projects/vgsdb_750x750.png' %}" alt="Card image cap">
@@ -57,7 +56,34 @@
         </p>
       </div>
     </div>
-    <!-- Card2 -->
+    <!-- Card -->
+    <div class="card bg-light col-md-4">
+      <a href="http://ec2-54-89-158-149.compute-1.amazonaws.com:8000/" target="_blank">
+        <img class="card-img-top" src="{% static 'main/projects/AutoSessionMVP_750x750.PNG' %}" alt="Card image cap">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title"><b>PDMAutoSession</b></h5>
+        <h6><i>skills: django, docker, javascript, aws ec2</i></h6>
+        <p class="card-text">A MVP website developed in Python Developer Mindset Program
+          for mixing and matching audio files of different irish tunes to play along with.
+        </p>
+      </div>
+    </div>
+    <!-- Card -->
+    <div class="card bg-light col-md-4">
+      <a href="http://carcassonnelane.pythonanywhere.com/" target="_blank">
+        <img class="card-img-top" src="{% static 'main/projects/CarcassonneLaneWebsite_RAwY2ne.jpg' %}" alt="Card image cap">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title"><b>CarcassoneLane</b></h5>
+        <h6><i>skill: flask</i></h6>
+        <p class="card-text">Personal website to keep track of Carcassone
+        games that we play at the house. Written with the Flask framework
+        and deployed on <a href="https://www.pythonanywhere.com/">PythonAnywhere.</a>
+        </p>
+      </div>
+    </div>
+    <!-- Card -->
     <div class="card bg-light col-md-4">
       <a href="https://github.com/claytoncook12/DataQuest_DataEngineering_GuidedProjects/blob/main/Guided%20Project%20-%20Hacker%20News%20Pipeline.ipynb" target="_blank">
         <img class="card-img-top" src="{% static 'main/projects/Guided_Project_-_Hacker_News_Pipeline.png' %}" alt="Card image cap">
@@ -68,7 +94,7 @@
         <p class="card-text">This was a project completed in the DataQuest.io DataEngineering Carrer Path program.</p>
       </div>
     </div>
-    <!-- Card3 -->
+    <!-- Card -->
     <div class="card bg-light col-md-4">
       <a href="https://github.com/claytoncook12/DataQuest_DataEngineering_GuidedProjects/blob/main/Guided%20Project%20-%20Implementing%20A%20Key-Value%20Database.ipynb" target="_blank">
         <img class="card-img-top" src="{% static 'main/projects/Guided_Project_-_Implementing_A_Key-Val.png' %}" alt="Card image cap">
@@ -80,7 +106,7 @@
           Data Engineering Career Path program</p>
       </div>
     </div>
-    <!-- Card4 -->
+    <!-- Card -->
     <div class="card bg-light col-md-4">
       <a href="https://github.com/claytoncook12/DataQuest_DataEngineering_GuidedProjects/blob/main/Guided%20Project%20-%20Answering%20Business%20Questions%20using%20SQL.ipynb" target="_blank">
         <img class="card-img-top" src="{% static 'main/projects/DataQuest_Answering_Business_Que.png' %}" alt="Card image cap">
@@ -92,41 +118,53 @@
           Engineering Career Path program.</p>
       </div>
     </div>
-    <!-- Card5 -->
-    <div class="card bg-light col-md-4">
-      <a href="http://carcassonnelane.pythonanywhere.com/" target="_blank">
-        <img class="card-img-top" src="{% static 'main/projects/CarcassonneLaneWebsite_RAwY2ne.jpg' %}" alt="Card image cap">
-      </a>
-      <div class="card-body">
-        <h5 class="card-title"><b>CarcassoneLane</b></h5>
-        <h6><i>skill: data application</i></h6>
-        <p class="card-text">Personal website to keep track of Carcassone
-          games that we play at the house.</p>
-      </div>
-    </div>
   </div>
+</section>
+<br>
+<br>
 
-  <section id='skills'>
-    <h2 id='section-header'>Skills</h2>
-    <hr>
-    <dl>
-      <dt>Programming Languages</dt>
+<section id="presentations">
+  <h2 id='section-header'>Presentations</h2>
+  <hr>
+  <dl>
+    <dt>October 12th, 2021 - <a href="https://pybit.es/catalogue/the-pdm-program/">Python Developer Mindset</a> Code Clinic</dt>
+      <dd>- Test Driven Development of Django Projects
+        <a href="https://github.com/claytoncook12/PDMPresentation202108">
+          (Code and Presentation)
+        </a>
+      </dd>
+  </dl>
+</section>
+<br>
+<br>
+
+<section id='skills'>
+  <h2 id='section-header'>Skills</h2>
+  <hr>
+  <dl>
+    <dt>Programming Languages</dt>
       <dd>- Python</dd>
       <dd>- SQL</dd>
-      <dt>Data Analysis</dt>
+    <dt>Data Analysis</dt>
       <dd>- Pandas</dd>
-      <dt>Databases</dt>
+    <dt>Databases</dt>
       <dd>- SQLite3</dd>
       <dd>- PostgreSQL</dd>
-      <dd>- gINT</dd>
-      <dt>Web Frameworks</dt>
+      <dd>- gINT (geotechnical engineering specific)</dd>
+    <dt>Docker</dt>
+    <dt>Web Frameworks</dt>
       <dd>- Django</dd>
-      <dt>Code Editor</dt>
+    <dt>Amazon Web Services</dt>
+      <dd>- EC2</dd>
+      <dd>- Elastic Beanstalk</dd>
+      <dd>- S3</dd>
+    <dt>Code Editor</dt>
       <dd>- Visual Studio Code</dd>
-      <dt>Version Control</dt>
+    <dt>Version Control</dt>
       <dd>- git</dd>
-    </dl>  
-  </section>
-<section>
+  </dl>  
+</section>
+
+
 
 {% endblock %}
