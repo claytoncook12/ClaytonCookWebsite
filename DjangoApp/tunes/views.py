@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
+
+from .models import Tune
 
 
 def list(request):
@@ -12,8 +14,10 @@ def list(request):
 
 def detail(request, pk):
 
+    tune = get_object_or_404(Tune, pk=pk)
+
     context = {
-        "value1": "value1",
+        "tune": tune,
     }
 
     return render(request, "tunes/detail.html", context)
