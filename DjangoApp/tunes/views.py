@@ -3,13 +3,13 @@ from django.shortcuts import get_object_or_404, render
 from .models import Tune, ABCTune
 
 
-def tunes_list(request):
+def list(request):
 
     context = {
         "value1": "value1",
     }
 
-    return render(request, "tunes/tunes_list.html", context)
+    return render(request, "tunes/list.html", context)
 
 
 def detail(request, pk):

@@ -9,14 +9,14 @@ from tunes.tests import factories
 
 
 @pytest.mark.django_db
-class TestTunesList:
+class TestList:
     def test_reponse(self):
 
         client = Client()
-        response = client.get(reverse("tunes:tunes_list"))
+        response = client.get(reverse("tunes:list"))
 
         assert response.status_code == 200,\
-            "200 code status for tunes.views.tunes_list"
+            "200 code status for tunes.views.list"
 
 
 @pytest.mark.django_db
