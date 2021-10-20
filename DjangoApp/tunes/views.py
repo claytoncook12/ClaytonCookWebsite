@@ -5,8 +5,10 @@ from .models import Tune, ABCTune
 
 def list(request):
 
+    tunes_qs = Tune.objects.all()
+
     context = {
-        "value1": "value1",
+        "tunes_qs": tunes_qs,
     }
 
     return render(request, "tunes/list.html", context)
