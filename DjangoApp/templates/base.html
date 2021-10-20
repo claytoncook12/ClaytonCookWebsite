@@ -27,7 +27,7 @@
   <body>
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light rounded">
-        <a class="navbar-brand" href="{% url 'home' %}">
+        <a class="navbar-brand" href="{% url 'main:home' %}">
           <img id='main-icon' src="{% static 'main/cc_cog_order_to_disorder.svg' %}" alt="">
         </a>
         <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,10 +37,10 @@
         <div class="collapse navbar-collapse" id="navbarsExample09">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link color-me" href="{% url 'home' %}#portfolio">Portfolio</a>
+              <a class="nav-link color-me" href="{% url 'main:home' %}#portfolio">Portfolio</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="disabled" href="#">Music</a>
+                <a class="nav-link" href="{% url 'main:music_home' %}">Music</a>
             </li>
           </ul>
         </div>

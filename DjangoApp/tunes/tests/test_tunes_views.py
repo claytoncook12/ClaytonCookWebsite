@@ -7,6 +7,7 @@ from django.urls import reverse
 
 from tunes.tests import factories
 
+
 @pytest.mark.django_db
 class TestTunesList:
     def test_reponse(self):
@@ -16,18 +17,6 @@ class TestTunesList:
 
         assert response.status_code == 200,\
             "200 code status for tunes.views.tunes_list"
-
-
-@pytest.mark.django_db
-class TestTunesHome:
-    def test_reponse(self):
-
-        client = Client()
-        response = client.get(reverse("tunes:tunes_home"))
-
-        assert response.status_code == 200,\
-            "200 code status for tunes.views.tunes_list"
-
 
 
 @pytest.mark.django_db
