@@ -1,4 +1,5 @@
 import factory
+import datetime
 
 from tunes import models
 
@@ -85,3 +86,13 @@ class ABCTunePieceFactory(factory.django.DjangoModelFactory):
                 "G"~G3D EDB,D|GFGB d2Bd|"C"eged BAGA|"G"BAGE "D"EDDE|
                 "G"~G3D EDB,D|GFGB d2Bd|"C"eged BAGA|"G"BAGE "D"EDD2:|
                 """
+
+
+class YoutubePlaythroughFactory(factory.django.DjangoModelFactory):
+    class Meta:
+        model = models.YoutubePlaythrough
+    
+    tune = factory.SubFactory(TuneFactory)
+    title = "Test Title of Playthrough"
+    youtube_playthrough_url = "https://www.youtube.com/embed/testlink"
+    date_recorded = datetime.date(2021, 10, 21)

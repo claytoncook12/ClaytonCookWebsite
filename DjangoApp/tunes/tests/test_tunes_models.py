@@ -175,3 +175,17 @@ class TestABCTunePiece:
     def test_init(self):
         obj = factories.ABCTunePieceFactory()
         assert obj.pk == 1, "Should save an instance"
+
+
+@pytest.mark.django_db
+class TestYoutubePlaythrough:
+    def test_init(self):
+        obj = factories.YoutubePlaythroughFactory()
+        assert obj.pk == 1, "Should save an instance"
+    
+    def test_str(self):
+        obj = factories.YoutubePlaythroughFactory()
+        obj_str = "Video " + str(obj.id) + " " + obj.title +\
+                  " (" + obj.tune.name + ")"
+        
+        assert obj_str == str(obj), "Check str of YoutubePlaythrough"

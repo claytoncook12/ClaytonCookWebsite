@@ -53,36 +53,41 @@
 </div> 
 <hr>
 
-{% if abc_list %}
-    {% for abc in abc_list %}
-        Key: {{ abc.key|title }}
-        <!-- divs for abc paper and audio -->
-        <div id="paper"></div>
-        <div id="audio"></div>
-        <div class="midi">MIDI</div>
-        <section class="output">
-            <nav>
-                <button onclick="printDiv('paper')"><i class="fa fa-print" aria-hidden="true"></i> Print</button>
-            </nav>
-        </section>
-    
+<h2
+    style="text-align: left;"
+>
+Sheet Music
+</h2>
+    {% if abc_list %}
+        {% for abc in abc_list %}
+            Key: {{ abc.key|title }}
+            <!-- divs for abc paper and audio -->
+            <div id="paper"></div>
+            <div id="audio"></div>
+            <div class="midi">MIDI</div>
+            <section class="output">
+                <nav>
+                    <button onclick="printDiv('paper')"><i class="fa fa-print" aria-hidden="true"></i> Print</button>
+                </nav>
+            </section>
         
-        <!-- Load Script to Update 
-             id="paper"
-             id="audio"
-             class="midi"
-             class="output"
-        -->
-        {% include "tunes/subtemplates/render_abc_audio_midi.html" with abc_text=abc.abc_full_default_bpm %} 
+            
+            <!-- Load Script to Update 
+                id="paper"
+                id="audio"
+                class="midi"
+                class="output"
+            -->
+            {% include "tunes/subtemplates/render_abc_audio_midi.html" with abc_text=abc.abc_full_default_bpm %} 
 
-        <!-- Show raw abc notation -->
-        <h4>ABC notation</h4>
-        <p style="white-space: pre-wrap;">{{ abc.abc_full_default|safe }}</p>
-        <br>
-    {% endfor %}
-{% else %}
-    <p>No abc for tune.</p>
-{% endif %}
-
+            <!-- Show raw abc notation -->
+            <h4>ABC notation</h4>
+            <p style="white-space: pre-wrap;">{{ abc.abc_full_default|safe }}</p>
+            <br>
+        {% endfor %}
+    {% else %}
+        <p>No abc for tune.</p>
+    {% endif %}
+<hr>
 
 {% endblock %}

@@ -193,3 +193,15 @@ class ABCTunePiece(models.Model):
 
     class Meta:
         ordering = ['part_order']
+
+
+class YoutubePlaythrough(models.Model):
+    title = models.TextField(max_length=50, verbose_name="Title of video playthrough.")
+    tune = models.ForeignKey(Tune, on_delete=models.CASCADE,
+                             verbose_name="Tune that is being played")
+    youtube_playthrough_url = models.URLField('Youtube Embeded URL for Playthrough')
+    date_recorded = models.DateField('Date Recorded')
+
+    def __str__(self):
+        return "Video " + str(self.id) + " " + self.title +\
+                  " (" + self.tune.name + ")"

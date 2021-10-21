@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import TuneType, Key, Tune, Composer, Meter, UnitNoteLength, BPM
+from .models import TuneType, Key, Tune, Composer, Meter, UnitNoteLength, BPM, YoutubePlaythrough
 from .models import ABCTune, ABCTunePiece
 
 
@@ -61,3 +61,8 @@ class ABCTextAdmin(admin.ModelAdmin):
     ordering = ("tune",)
     list_filter = ("key",)
     inlines = [ABCTunePieceInline]
+
+@admin.register(YoutubePlaythrough)
+class YoutubePlaythroughAdmin(admin.ModelAdmin):
+    ordering = ("date_recorded",)
+    list_display = ("date_recorded", "tune", "title")
