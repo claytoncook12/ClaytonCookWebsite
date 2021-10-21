@@ -63,3 +63,18 @@ class TestTuneDetail:
         abc_piece = obj3.abc_piece
         assert abc_piece in response.content.decode(),\
             "abc_piece displayed on tune detail page"
+    
+    def test_youtube_playthrough(self):
+        obj1 = factories.TuneFactory()
+
+        obj2 = factories.YoutubePlaythroughFactory(
+            tune=obj1
+        )
+
+        client = Client()
+        response = client.get(obj1.get_absolute_url())
+
+        #Test YoutunePlaythrough.title present on page
+        video_title = obj2.title
+        assert video_title in response.content.decode(),\
+            "video_title desplayed on tune detail page"
