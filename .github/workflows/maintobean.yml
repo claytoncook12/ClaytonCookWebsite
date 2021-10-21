@@ -45,7 +45,7 @@ jobs:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           application_name: claytoncook.com
-          environment_name: claytoncookcom-prod-env
+          environment_name: Claytoncookcom-env-prod2
           version_label: "djangobeantest-${{ steps.format-time.outputs.replaced }}"
           region: us-east-1
           wait_for_environment_recovery: 60
