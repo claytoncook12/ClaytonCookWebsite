@@ -9,6 +9,17 @@ from tunes.tests import factories
 
 
 @pytest.mark.django_db
+class TestList:
+    def test_reponse(self):
+
+        client = Client()
+        response = client.get(reverse("tunes:list"))
+
+        assert response.status_code == 200,\
+            "200 code status for tunes.views.list"
+
+
+@pytest.mark.django_db
 class TestTuneDetail:
     def test_reponse(self):
 
@@ -32,7 +43,7 @@ class TestTuneDetail:
         assert name in response.content.decode(), "tune.name is title of page"
 
         # Test tune.tune_type on page
-        tune_type_html = "type: " + obj.tune_type.tune_type_char
+        tune_type_html = "(" + obj.tune_type.tune_type_char + ")"
         assert tune_type_html in response.content.decode(),\
             "tune.tune_type.tune_type_char in tune detail page content"
 

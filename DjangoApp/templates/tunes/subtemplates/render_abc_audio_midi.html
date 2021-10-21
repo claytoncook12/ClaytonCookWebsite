@@ -52,7 +52,10 @@
     var cursorControl = new CursorControl(); // see section on CursorControl
     // Variable abc controls the abc that is displayed
     var abc = `{{ abc_text|safe }}`;
-    var abcOptions = { add_classes: true };
+    var abcOptions = {
+        add_classes: true,
+        responsive: "resize",
+    };
     var audioParams = {
         chordsOff: true,
         program: 41,
