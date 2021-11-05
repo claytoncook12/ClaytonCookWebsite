@@ -74,6 +74,7 @@
 Sheet Music
 </h2>
     {% if abc_list %}
+    <div>
         {% for abc in abc_list %}
             Key: {{ abc.key|title }}
             <!-- divs for abc paper and audio -->
@@ -96,13 +97,23 @@ Sheet Music
             {% include "tunes/subtemplates/render_abc_audio_midi.html" with abc_text=abc.abc_full_default_bpm %} 
 
             <!-- Show raw abc notation -->
-            <h4>ABC notation</h4>
-            <p style="white-space: pre-wrap;">{{ abc.abc_full_default|safe }}</p>
-            <br>
+            <div class="col text-center">
+                <button class="abc-show-button">
+                    Show ABC Notation
+                </button>
+            </div>
+            <div class="abc-notation" hidden>
+                <h4>ABC notation</h4>
+                <p style="white-space: pre-wrap;">{{ abc.abc_full_default|safe }}</p>
+                <br>
+            </div>
         {% endfor %}
+    </div>
     {% else %}
         <p>No abc for tune.</p>
     {% endif %}
 <hr>
 
+<!-- JS for abc button -->
+<script src="{% static 'tunes/js/abc_button.js' %}" type="text/javascript"></script>
 {% endblock %}
