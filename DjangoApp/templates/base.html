@@ -45,6 +45,11 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url 'tunes:list' %}">Tunes</a>
             </li>
+            {% if request.user.is_superuser %}
+            <li>
+              <a class="nav-link" href="{% url 'main:admin_links' %}">AdminLinks</a>
+            </li>
+            {% endif %}
           </ul>
         </div>
       </nav>

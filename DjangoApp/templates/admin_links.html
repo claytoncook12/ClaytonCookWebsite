@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<h1>Admin Links</h1>
+<hr>
+<div class="row">
+    <div class="col text-center">
+        <a class="btn btn-outline-dark btn-lg" href="{% url 'main:dbjson'%}">
+            Download ClaytonCook.com Database JSON
+        </a>
+    </div>
+</div>
+
+{%endblock %}
