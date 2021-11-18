@@ -32,7 +32,7 @@ def dbjson(request):
     # Make File Name
     now = datetime.now()
     date_time = now.strftime("%Y-%m-%d %H-%M-%S")
-    json_file_name = f'{date_time}sessiondb.json'
+    json_file_name = f'{date_time}claytoncook_comdb.json'
     path = Path(settings.BASE_DIR) / 'datadump'
     json_file = path / json_file_name
 
