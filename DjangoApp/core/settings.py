@@ -78,15 +78,15 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-if 'RDS_HOSTNAME' in os.environ:
+if config('DB_SETUP') == 'local':
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': os.environ['RDS_DB_NAME'],
-            'USER': os.environ['RDS_USERNAME'],
-            'PASSWORD': os.environ['RDS_PASSWORD'],
-            'HOST': os.environ['RDS_HOSTNAME'],
-            'PORT': os.environ['RDS_PORT'],
+            'NAME': 'postgres',
+            'USER': 'postgres',
+            'PASSWORD': 'postgres',
+            'HOST': 'localhost',  # db or localhost
+            'PORT': 6543,  # 5432 or 6543
         }
     }
 else:
@@ -96,8 +96,8 @@ else:
             'NAME': 'postgres',
             'USER': 'postgres',
             'PASSWORD': 'postgres',
-            'HOST': 'localhost',  # db or localhost
-            'PORT': 6543,  # 5432 or 6543
+            'HOST': 'db',  # db or localhost
+            'PORT': 5432,  # 5432 or 6543
         }
     }
 
