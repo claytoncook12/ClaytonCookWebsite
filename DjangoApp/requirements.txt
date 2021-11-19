@@ -6,3 +6,4 @@ gunicorn
 factory-boy
 pytest-django
 pytest-cov
+django-request
