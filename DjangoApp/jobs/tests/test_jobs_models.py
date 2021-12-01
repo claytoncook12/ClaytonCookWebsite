@@ -24,6 +24,12 @@ class TestPersonFactory:
         obj = factories.PersonFactory()
         assert obj.pk == 1, "Should save an instance"
 
+@pytest.mark.django_db
+class TestLocationFactory:
+    def test_init(self):
+        obj = factories.LocationFactory()
+        assert obj.pk == 1, "Should save an instance"
+
 
 @pytest.mark.django_db
 class TestJobPostingFactory:

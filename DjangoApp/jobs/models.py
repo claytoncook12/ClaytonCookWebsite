@@ -26,10 +26,18 @@ class Person(models.Model):
     def __str__(self):
         return f'{self.name} ({self.company}) ({self.email})'
 
+
+class Location(models.Model):
+    location = models.CharField('Location of Job', max_length=200)
+
+    def __str__(self):
+        return self.location
+
 class JobPosting(models.Model):
     company = models.ForeignKey(Company, on_delete=CASCADE)
     job_posting_url = models.URLField("Job Posting URL")
     job_short_description = models.CharField("Job Short Description", max_length=50)
+    job_location = models.ForeignKey(Location, on_delete=CASCADE, null=True, blank=True)
     job_description = models.TextField("Job Description")
     current_status = models.ForeignKey(CurrentStatus, on_delete=CASCADE)
     additional_notes = models.TextField("Additional Notes", null=True, blank=True)

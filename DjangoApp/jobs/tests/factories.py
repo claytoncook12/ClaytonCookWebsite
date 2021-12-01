@@ -30,6 +30,12 @@ class PersonFactory(factory.django.DjangoModelFactory):
     email = "andrew.davis@gamil.com"
     additional_informaiton = "Some additona information about the person"
 
+class LocationFactory(factory.django.DjangoModelFactory):
+    class Meta:
+        model = models.Location
+    
+    location = "Frankfort, KY"
+
 
 class JobPostingFactory(factory.django.DjangoModelFactory):
     class Meta:
@@ -38,6 +44,7 @@ class JobPostingFactory(factory.django.DjangoModelFactory):
     company = factory.SubFactory(CompanyFactory)
     job_posting_url = "examplejoburl.com/job/posting12345"
     job_short_description = "Programer I"
+    job_location = factory.SubFactory(LocationFactory)
     job_description = "This position in open for developer with 2 yrs experience"
     current_status = factory.SubFactory(CurrentStatusFactory)
     additional_notes = "some additional notes about the possible and specific information"
