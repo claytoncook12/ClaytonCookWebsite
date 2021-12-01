@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'request',
     'main',
     'tunes',
+    'jobs',
 ]
 
 MIDDLEWARE = [
