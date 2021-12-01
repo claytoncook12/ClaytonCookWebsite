@@ -40,7 +40,10 @@ class JobPostingAdmin(admin.ModelAdmin):
     inlines = [PreInterviewInline, InterviewInline]
 
     def job_posting_location(self, obj):
-        return obj.job_location.location
+        try:
+            return obj.job_location.location
+        except:
+            return ''
 
 
 @admin.register(PreInterview)
