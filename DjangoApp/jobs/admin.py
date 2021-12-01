@@ -38,6 +38,13 @@ class JobPostingAdmin(admin.ModelAdmin):
 
 @admin.register(PreInterview)
 class PreInterviewAdmin(admin.ModelAdmin):
-    list_display = ("id", "job_posting", "job_found_date", "apply", "date_applied")
-    list_filter = ("apply",)
+    list_display = ("id", "job_posting", "job_found_date", "apply", "date_applied","follow_up_email")
+    list_filter = ("apply","follow_up_email")
 
+
+@admin.register(Interview)
+class InterviewAdmin(admin.ModelAdmin):
+    list_display = ("id", "date_of_interview","job_posting_company","interviewer")
+
+    def job_posting_company(self, obj):
+        return obj.job_posting.company.company_name

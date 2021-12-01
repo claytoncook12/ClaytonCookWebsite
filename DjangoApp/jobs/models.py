@@ -21,7 +21,7 @@ class Person(models.Model):
     name = models.CharField('Full Name', max_length=200)
     company = models.ForeignKey(Company, on_delete=CASCADE)
     email = models.EmailField('Email')
-    additional_informaiton = models.TextField('Additional Person Information')
+    additional_informaiton = models.TextField('Additional Person Information', null=True, blank=True)
 
     def __str__(self):
         return f'{self.name} ({self.company}) ({self.email})'
