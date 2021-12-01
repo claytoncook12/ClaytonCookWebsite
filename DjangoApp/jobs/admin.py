@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Company, CurrentStatus, Person
+from .models import Company, CurrentStatus, Person, Location
 from .models import JobPosting, PreInterview, Interview
 
 
@@ -19,6 +19,10 @@ class CurrenStatusAdmin(admin.ModelAdmin):
 class PersonAdmin(admin.ModelAdmin):
     ordering = ("company", "name")
     list_dispplay = ("company", "name", "email")
+
+@admin.register(Location)
+class LocationAdmin(admin.ModelAdmin):
+    pass
 
 
 class PreInterviewInline(admin.TabularInline):
