@@ -32,7 +32,8 @@ class InterviewInline(admin.TabularInline):
 
 @admin.register(JobPosting)
 class JobPostingAdmin(admin.ModelAdmin):
-    list_display = ("id","company","job_short_description")
+    list_display = ("id","current_status","company","job_short_description",)
+    list_filter = ("current_status",)
     inlines = [PreInterviewInline, InterviewInline]
 
 @admin.register(PreInterview)
