@@ -40,6 +40,7 @@ class JobPostingFactory(factory.django.DjangoModelFactory):
     job_short_description = "Programer I"
     job_description = "This position in open for developer with 2 yrs experience"
     current_status = factory.SubFactory(CurrentStatusFactory)
+    additional_notes = "some additional notes about the possible and specific information"
 
 
 class PreInterviewFactory(factory.django.DjangoModelFactory):

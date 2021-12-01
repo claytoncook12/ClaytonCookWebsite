@@ -32,6 +32,7 @@ class JobPosting(models.Model):
     job_short_description = models.CharField("Job Short Description", max_length=50)
     job_description = models.TextField("Job Description")
     current_status = models.ForeignKey(CurrentStatus, on_delete=CASCADE)
+    additional_notes = models.TextField("Additional Notes", null=True, blank=True)
 
     def __str__(self):
         return f'id:{self.id} status:{self.current_status} company:{self.company}'
